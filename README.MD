@@ -20,7 +20,7 @@
     - [What is TypeScript?](#what-is-typescript)
 
   - [Chapter-2 Set Up TypeScript](#chapter-2)
-    - [Set Up TypeScript and start using it on yout html](#set-up-typescript-and-start-using-it-on-your-html)
+    - [Set Up TypeScript and start using it on your html](#set-up-typescript-and-start-using-it-on-your-html)
     - [Compiling TypeScript into JavaScript](#compiling-typescript-into-javascript)
 
 ---
@@ -49,7 +49,7 @@ Typescript warns you about this.
 
 ### Chapter 2
 
-#### Set Up TypeScript and start using it on yout html
+#### Set Up TypeScript and start using it on your html
 
 First lets install typescript globally on our folder.
 

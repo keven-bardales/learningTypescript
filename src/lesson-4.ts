@@ -87,8 +87,43 @@ console.log(sumAll(undefined, 3)); // this is for it using the default value sin
 // Rest Parameters
 
 // this function takes all from the numbers and basically it makes it an array
-const total = (...nums: number[]): number => {
+const total = (a: number, ...nums: number[]): number => {
   return nums.reduce((prev, current) => prev + current);
 };
 
-logMsg(total(1, 2, 3, 4));
+logMsg('total' + total(1, 2, 3, 4)); // here it does not take the one since is not inside the rest parameter OUTPUT 9
+
+const total2 = (a: number, ...nums: number[]): number => {
+  return a + nums.reduce((prev, current) => prev + current);
+};
+
+logMsg(total2(1, 2, 3, 4)); //now it should take the one also OUTPUT 10
+
+// REST PARAMETER SHOULD BE AT THE END
+
+// NEVER TYPE it does not return anything like in errors for example
+
+const createError = (errMsg: string): never => {
+  throw new Error(errMsg);
+};
+
+const infinite = () => {
+  let i: number = 1;
+  while (true) {
+    i++;
+    if (i > 100) break;
+  }
+};
+
+//TYPE GUARD WITH TYPESCRIPT
+
+const isNumber = (value: any): boolean => {
+  return typeof value === 'number' ? true : false;
+};
+
+// use of the never type
+const numberOrString = (value: number | string): string => {
+  if (typeof value === 'string') return 'String';
+  if (isNumber(value)) return 'number';
+  return createError('This should never happen');
+};

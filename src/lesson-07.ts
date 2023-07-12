@@ -18,10 +18,12 @@ const todaysTransactions: TransactionObj = {
   Books: -5,
   Job: 50,
   Dave: 45,
+  1: 20,
 };
 
 console.log(todaysTransactions.Pizza);
 console.log(todaysTransactions['Pizza']);
+console.log(todaysTransactions[1]);
 
 // Dinamically accesing this
 
